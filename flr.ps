@@ -1,0 +1,100 @@
+/tab [ -7 -15 -30 7 15 30 205 220 30 40 ] def
+/i 0 def
+/j 8 def
+
+/Times-Bold findfont
+26 scalefont
+setfont
+
+/picture{
+
+/a exch def
+50 tab a get rlineto
+
+ 
+}def
+
+/pictureit{
+
+3{
+
+i picture
+/i i 1 add def
+ 
+}repeat
+
+}def
+
+/picture2{
+
+/b exch def
+/c exch def
+
+tab b get 130 tab c get 300 60 arc 
+stroke
+
+}def
+ 
+/picture2it{
+
+2{
+
+j i picture2
+/i i 1 add def
+/j j 1 add def
+ 
+}repeat
+
+}def
+
+
+
+
+7 setlinewidth
+1 setlinecap
+50 50 moveto
+0 80 rlineto
+
+pictureit
+50 130 moveto
+pictureit
+stroke
+
+215 130 50 105 255 arc 
+stroke
+
+picture2it
+
+
+0 0 moveto
+0 235 rlineto
+595 0 rlineto
+0 -232 rlineto
+-595 0 rlineto
+stroke
+
+270 140 translate
+5 0 moveto 
+-5 rotate
+(.COM) show
+0 30 moveto
+1 0 0 setrgbcolor
+10 rotate
+(MEGAPHONE) show
+-5 rotate
+0 -35 moveto
+-12 rotate
+(HEAR (ABOUT) US!) show
+
+0 0 0 setrgbcolor
+/Times-Bold findfont
+10 scalefont
+setfont
+
+12 rotate
+-270 -140 translate
+25 10 moveto
+6 0 (pay us a visit! 3231 N Main St, Los Angeles, CA 90031) ashow
+
+
+showpage
